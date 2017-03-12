@@ -12,5 +12,5 @@ after_success:
   - export PATH=$PATH:$HOME/.local/bin
   - eval $(aws ecr get-login --region us-west-2)
   - docker tag petclinic:latest 556771014529.dkr.ecr.us-west-2.amazonaws.com/petclinic:latest
-  - docker push 556771014529.dkr.ecr.us-east-1.amazonaws.com/myrepo:petclinic
+  - docker push 556771014529.dkr.ecr.us-west-2.amazonaws.com/petclinic
   - aws ecs run-task --cluster default --region us-east-1 --task-definition petclinic:1
